@@ -1,0 +1,29 @@
+{
+  "name": "login_node",
+  "version": "1.0.0",
+  "description": "login server",
+  "keywords": [
+    "login-server"
+  ],
+  "homepage": "https://github.com/CS7player/login-node#readme",
+  "bugs": {
+    "url": "https://github.com/CS7player/login-node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CS7player/login-node.git"
+  },
+  "license": "ISC",
+  "author": "s.h.chandrasekhar",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "server": "nodemon app.js",
+    "test": "login-server"
+  },
+  "dependencies": {
+    "@cs7player/login-lib": "^1.0.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
