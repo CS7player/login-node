@@ -2,6 +2,7 @@ const loginLib = require("@cs7player/login-lib");
 const express = require("express");
 const cors = require("cors");
 const app = express();
+require("./app/utils/constants");
 const corsOptions = {
   origin: (origin, callback) => {
     if (!origin || allow_origns.includes(origin)) {
