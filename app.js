@@ -5,7 +5,7 @@ const app = express();
 require("./app/utils/constants");
 const corsOptions = {
   origin: (origin, callback) => {
-    if (!origin || allow_origns.includes(origin)) {
+    if (!origin || allow_origns.includes(origin) || IS_ALLOW_ORIGN==1 ) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
