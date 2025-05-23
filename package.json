@@ -22,7 +22,7 @@
     "test": "login-server"
   },
   "dependencies": {
-    "@cs7player/login-lib": "^1.0.7",
+    "@cs7player/login-lib": "^1.0.8",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "express-validator": "^7.2.1"
