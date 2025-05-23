@@ -17,7 +17,11 @@ exports.add = async (requestBody) => {
     return { status: true, data: result };
   } catch (error) {
     if (error.code === 11000) {
+     if("username" in  error.keyValue){
+      return { status: false, data: error, msg: "Username already exits!!!" };
+     }else{
       return { status: false, data: error, msg: "Email already exits!!!" };
+     }
     } else {
       return { status: false, data: error };
     }

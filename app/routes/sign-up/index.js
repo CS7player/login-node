@@ -6,7 +6,7 @@ const { isValid } = require("../../utils/common");
 router.post(
  "/",
  [
-  check("username").isLength({ min: 7, max: 7 }).withMessage("Username must be exactly 7 characters"),
+  check("username").isLength({ min: 7 }).withMessage("Username must be exactly 7 characters"),
   check("mail").isEmail().withMessage("Invalid email address"),
   check("password").isLength({ min: 6 }).withMessage("Password must be at least 6 characters"),
  ],

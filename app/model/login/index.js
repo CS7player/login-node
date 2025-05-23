@@ -36,8 +36,9 @@ exports.forgetPassword = async (requestBody)=>{
     let password =  await pbkdf.hashPassword(requestBody["password"]);
     let filter = {mail:mail};
     let update = {password:password};
-    let result = await mongoQuery.updateOne(USERS, filter,update);
-    return {status:true,token:result};
+    console.log(filter,update,otpJson)
+    let result = await mongoQuery.updateOne(USERS,filter,update);
+    return {status:true,data:result,msg:"Updated successfully!!!"};
   } catch (error) {
     return { status: false, data: error };
   }
